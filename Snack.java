@@ -8,6 +8,7 @@ public class Snack
     {
         this.snackName = snackName;
         this.snackPrice = snackPrice;
+        this.exitMessage = exitMessage;
     }
 
     public String getName()
