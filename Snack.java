@@ -2,8 +2,9 @@ public class Snack
 {
     private String snackName;
     private double snackPrice;
+    private String exitMessage;
     
-    public Snack(String snackName, double snackPrice)
+    public Snack(String snackName, double snackPrice, String exitMessage)
     {
         this.snackName = snackName;
         this.snackPrice = snackPrice;
@@ -11,11 +12,16 @@ public class Snack
 
     public String getName()
     {
-        return snackName;
+        return this.snackName;
     }    
 
     public double getPrice()
     {
-        return snackPrice;
+        return this.snackPrice;
+    }
+
+    public String getExitMessage()
+    {
+        return this.exitMessage;
     }
 }
