@@ -15,7 +15,7 @@ public class VendingMachine
         String snackSelection = input.nextLine();
 
         if (snackSelection.equalsIgnoreCase("doritos")) {
-            chosenSnack = new Snack("Doritos", 1.25, "It's the erfect triangle snack!");
+            chosenSnack = new Snack("Doritos", 1.25, "It's the perfect triangle snack!");
         } else if (snackSelection.equalsIgnoreCase("skittles")) {
             chosenSnack = new Snack("Skittles", 1.00, "Taste the rainbow!");
         } else if (snackSelection.equalsIgnoreCase("pop tarts")) {
@@ -40,12 +40,12 @@ public class VendingMachine
         String iHateTheScannerClass = input.nextLine();
         String confirmation = input.nextLine();
 
-        if (iHateTheScannerClass.equalsIgnoreCase("yes")) {
+        if (iHateTheScannerClass.equalsIgnoreCase("yes") || confirmation.equalsIgnoreCase("yes")) {
             if (payment > price) {
                 change = payment - price;
-                System.out.printf("Change: %.2f", change);
+                System.out.println("Change: $" + change);
             }
-            chosenSnack.getExitMessage();
+            System.out.println(chosenSnack.getExitMessage());
         } else {
             System.out.println("Transaction cancelled and money returned.");
             System.out.println("Have a wonderful day!");
